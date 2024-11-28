@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Box, Typography, Grid } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { keyframes } from "@emotion/react";
 import axios from "axios";
+import Grid from "@mui/material/Grid";
 
 // Animations
 const glitch = keyframes`

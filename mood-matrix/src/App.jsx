@@ -6,6 +6,7 @@ import MoodSelector from "./components/MoodSelector";
 import MoodDashboard from "./components/MoodDashboard";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { keyframes } from "@emotion/react";
+import NavBar from "./components/NavBar";
 
 // Create cyberpunk theme
 
@@ -121,11 +122,13 @@ function App() {
             >
               MoodMatrix
             </Typography>
+            <NavBar /> {/* Add NavBar as first child */}
             <Typography
               variant="h6"
               sx={{
                 opacity: 0.8,
-                fontFamily: '"Share Tech Mono", monospace'
+                fontFamily: '"Share Tech Mono", monospace',
+                mt: 4
               }}
             >
               [SELECT_MOOD.exe] Initializing mood parameters...
