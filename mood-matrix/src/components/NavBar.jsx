@@ -79,10 +79,10 @@ const NavBar = () => {
       <Toolbar sx={{ justifyContent: "space-between" }}>
         <Logo>MOOD MATRIX</Logo>
         <Box sx={{ display: "flex" }}>
-          <NavLink>Dashboard</NavLink>
-          <NavLink>Profile</NavLink>
-          <NavLink>Analytics</NavLink>
-          <NavLink>Settings</NavLink>
+          <NavLink to="/">Dashboard</NavLink>
+          <NavLink to="./profile">Profile</NavLink>
+          <NavLink to="./analytics">Analytics</NavLink>
+          <NavLink to="./settings">Settings</NavLink>
         </Box>
       </Toolbar>
     </CyberAppBar>

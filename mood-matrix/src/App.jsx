@@ -7,7 +7,10 @@ import MoodDashboard from "./components/MoodDashboard";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { keyframes } from "@emotion/react";
 import NavBar from "./components/NavBar";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Profile from "./pages/Profile";
+import Analytics from "./pages/Analytics";
+import Settings from "./pages/Settings";
 // Create cyberpunk theme
 
 const cyberpunkTheme = createTheme({
@@ -122,7 +125,21 @@ function App() {
             >
               MoodMatrix
             </Typography>
-            <NavBar /> {/* Add NavBar as first child */}
+            <BrowserRouter>
+              <ThemeProvider theme={cyberpunkTheme}>
+                <Box sx={{ minHeight: "100vh", background: "#0a0a0a" }}>
+                  <NavBar />
+                  <Box sx={{ paddingTop: "64px" }}>
+                    <Routes>
+                      <Route path="/" element={<App />} />
+                      <Route path="/profile" element={<Profile />} />
+                      <Route path="/analytics" element={<Analytics />} />
+                      <Route path="/settings" element={<Settings />} />
+                    </Routes>
+                  </Box>
+                </Box>
+              </ThemeProvider>
+            </BrowserRouter>
             <Typography
               variant="h6"
               sx={{
