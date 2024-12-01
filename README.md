@@ -1,4 +1,4 @@
-# MoodMatrix -- editing
+# MoodMatrix -- editing --> updating
 - thinking of but the idea is in my head. 
 
 ### the idea so far its cooking --> read me coming soooon! 
